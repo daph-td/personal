@@ -80,7 +80,7 @@ section{padding:var(--section) 0 0}
 .stats3 div{display:flex;flex-direction:column}
 .stats3 b{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.04em;line-height:1}
 .stats3 span{font-size:.85rem;color:#ffffffb3;font-weight:700;margin-top:4px}
-.hero-art{position:relative;aspect-ratio:560/520;width:100%;max-width:560px;justify-self:end;transform:translateY(calc(var(--p,0)*60px))}
+.hero-art{position:relative;aspect-ratio:560/650;width:100%;max-width:560px;justify-self:end;transform:translateY(calc(var(--p,0)*60px))}
 .stairs{width:100%;height:100%;overflow:visible}
 .stairs .line{fill:none;stroke:var(--chartreuse);stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.8s .5s var(--ease) forwards}
 .stairs .pill{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .6s var(--ease) forwards}
@@ -89,13 +89,16 @@ section{padding:var(--section) 0 0}
 .stairs .dot{fill:var(--pink);transform-box:fill-box;transform-origin:center;opacity:0;animation:pop .7s 2s var(--ease) forwards}
 .stairs .dot-t{font:800 19px Manrope,sans-serif;fill:var(--ink);opacity:0;animation:pop .7s 2.1s var(--ease) forwards}
 .stk{position:absolute;z-index:3;font-weight:800;font-size:.9rem;padding:10px 18px;border-radius:var(--r-pill);color:var(--ink);box-shadow:0 14px 30px -12px #0006;animation:bob 5s ease-in-out infinite;white-space:nowrap}
+.stairs .hub-link{fill:none;stroke:#fff;stroke-width:2.5;stroke-dasharray:5 7;stroke-linecap:round;opacity:0;animation:pop .6s 2.3s var(--ease) forwards}
+.stairs .hub-bar{fill:#fff;transform-box:fill-box;transform-origin:center;opacity:0;animation:pop .7s 2.4s var(--ease) forwards}
+.stairs .hub-t{font:800 22px Manrope,sans-serif;fill:var(--ink);opacity:0;animation:pop .7s 2.5s var(--ease) forwards}
 .stk--pink{background:var(--pink);top:2%;left:-2%;--r:-7deg}
-.stk--lime{background:var(--chartreuse);bottom:6%;right:2%;--r:5deg;animation-delay:-2s}
+.stk--lime{background:var(--chartreuse);bottom:0;right:2%;--r:5deg;animation-delay:-2s}
 .bgstar{position:absolute;color:#ffffff1f;pointer-events:none;animation:spin 40s linear infinite}
 .bgstar--a{width:420px;height:420px;right:-120px;top:-100px}
 .bgstar--b{width:240px;height:240px;left:-80px;bottom:-60px;animation-direction:reverse}
 .scrollhint{position:absolute;left:50%;bottom:22px;z-index:3;transform:translateX(-50%);color:#ffffffb3;animation:bob2 2s ease-in-out infinite}
-@media(max-width:900px){.hero{padding-top:96px}.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero-art{max-width:380px;justify-self:center}.scrollhint{display:none}}
+@media(max-width:900px){.hero{padding-top:96px}.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero-art{max-width:380px;justify-self:center}.stk--lime{bottom:-7%}.scrollhint{display:none}}
 
 /* Băng chữ chạy */
 .marquee{overflow:hidden;padding:clamp(28px,5vw,56px) 0 0;white-space:nowrap}
@@ -399,7 +402,7 @@ html{scroll-behavior:auto}
       <div class="stats3"><div><b>7</b><span>tuần</span></div><div><b>12</b><span>buổi</span></div><div><b>5</b><span>bạn / lớp</span></div></div>
     </div>
     <div class="hero-art" aria-hidden="true">
-      <svg class="stairs" viewBox="0 0 560 520">
+      <svg class="stairs" viewBox="0 0 560 650">
         <path class="line" pathLength="1" d="M40 470H170V360H300V250H430V120"/>
         <g class="pill" style="animation-delay:.9s"><rect x="6" y="396" width="140" height="44" rx="22"/><text x="76" y="426" text-anchor="middle">Discover</text></g>
         <g class="pill" style="animation-delay:1.2s"><rect x="155" y="286" width="120" height="44" rx="22"/><text x="215" y="316" text-anchor="middle">Define</text></g>
@@ -407,9 +410,12 @@ html{scroll-behavior:auto}
         <g class="pill" style="animation-delay:1.8s"><rect x="466" y="150" width="90" height="44" rx="22"/><text x="511" y="180" text-anchor="middle">Test</text></g>
         <circle class="dot" cx="430" cy="62" r="56"/>
         <text class="dot-t" x="430" y="69" text-anchor="middle">Deliver</text>
+        <path class="hub-link" d="M105 500V540M235 390V540M365 280V540M440 280V540"/>
+        <rect class="hub-bar" x="0" y="540" width="560" height="52" rx="26"/>
+        <text class="hub-t" x="280" y="573" text-anchor="middle">Knowledge Hub</text>
       </svg>
-      <span class="stk stk--pink">Product Design Process</span>
-      <span class="stk stk--lime">AI Design Workflow</span>
+      <span class="stk stk--pink">Quy trình design bạn đã biết</span>
+      <span class="stk stk--lime">Lớp AI và hub bạn học thêm</span>
     </div>
   </div>
   <a class="scrollhint" href="#vi-sao" aria-label="Cuộn xuống"><span class="ms" style="font-size:2rem">keyboard_arrow_down</span></a>
