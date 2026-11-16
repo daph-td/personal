@@ -190,11 +190,11 @@ function Programs() {
               </div>
               <div className="program-card-body">
                 <div className="program-card-tags">
-                  <span className="program-card-tag">Group · 7 to 8</span>
+                  <span className="program-card-tag">Group · 5 per batch</span>
                   <span className="program-card-level is-advanced">Mid / Senior</span>
                 </div>
-                <h3>AI Design Workflow for UI/UX Product Designer</h3>
-                <p>A repeatable AI workflow from business question to tested prototype, with every step reviewed. 10 sessions, weekly, over about 2.5 months.</p>
+                <h3>AI Design Workflow for Product Teams</h3>
+                <p>Build a Knowledge Hub as shared memory for AI, then run an end-to-end design workflow on one project with every step checked. 12 sessions over 7 weeks.</p>
                 <span className="program-card-link">View program</span>
               </div>
             </a>
